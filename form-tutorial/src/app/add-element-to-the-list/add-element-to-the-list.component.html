@@ -1,0 +1,5 @@
+<input #newFruit
+      (keyup.enter)="addFruit(newFruit.value)"
+      (blur)="addFruit(newFruit.value); newFruit.value='' ">
+<button (click)="addFruit(newFruit.value)">Add</button>
+<ul><li *ngFor="let fruit of fruits">{{fruit}}</li></ul>
